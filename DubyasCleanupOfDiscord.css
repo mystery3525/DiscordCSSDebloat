@@ -1,8 +1,17 @@
+/**
+ * @name discord vencord debloat
+ * @description A theme for debloating discord originally by DubyaDude modified by mystery3525
+ * @author mystery3525
+ * @version 1.0.0
+*/
+
 /* Dubyas list of annoying stuff he hides in discord using Quick CSS */
 /* Certain things added to by mystery3525 */
 
 /* Want to have this be synced up with your Discord so you don't need to re-copy and paste this for new additions?
- * Feel free to just import this gist directly by adding the following line:
+ * Feel free to just import this directly by adding the following line to the "Online Themes":
+ * https://raw.githubusercontent.com/mystery3525/DiscordCSSDebloat/main/DubyasCleanupOfDiscord.css
+ * OR import with QuickCSS:
  * @import url("https://raw.githubusercontent.com/mystery3525/DiscordCSSDebloat/main/DubyasCleanupOfDiscord.css");
  */
 
