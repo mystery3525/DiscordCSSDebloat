@@ -1,59 +1,59 @@
 /* Dubyas list of annoying stuff he hides in discord using Quick CSS */
+/* Certain things added to by mystery3525 */
 
 /* Want to have this be synced up with your Discord so you don't need to re-copy and paste this for new additions?
  * Feel free to just import this gist directly by adding the following line:
- * @import url("https://raw.githubusercontent.com/DubyaDude/DubyasCleanupOfDiscord/main/DubyasCleanupOfDiscord.css");
+ * @import url("https://raw.githubusercontent.com/mystery3525/DiscordCSSDebloat/main/DubyasCleanupOfDiscord.css");
  */
 
 /* Disable profile edit page upsell */
-div[id="profile-customization-tab"] > div[class^="container_"]
-{
-    display:none;
+div[id="profile-customization-tab"]>div[class^="container_"] {
+    display: none;
 }
 
 /* Disable emoji inspection upsell (ty Regalia) */
-[class^="nitroTextAndBadge_"], button:has([class^="premiumIcon_"]),
-[class^="emojiSection_"] [class^="flex_"] div[class*="text-sm-normal"]
-{
-    display:none;
+[class^="nitroTextAndBadge_"],
+button:has([class^="premiumIcon_"]),
+[class^="emojiSection_"] [class^="flex_"] div[class*="text-sm-normal"] {
+    display: none;
 }
 
 /* Disable Gift Button(s) (in chat) */
-button[aria-label="Send a gift"]
-{
+button[aria-label="Send a gift"] {
     display: none;
 }
 
 /* Hide Channel App Launcher in chat */
-[class^="channelAppLauncher_"]
-{
-    display:none;
+[class^="channelAppLauncher_"] {
+    display: none;
 }
-[class^="channelAppLauncher_"] > [class^="buttonContainer_"]
-{
-    display:none;
+
+[class^="channelAppLauncher_"]>[class^="buttonContainer_"] {
+    display: none;
 }
-.visual-refresh .channelAppLauncher_e6e74f
-{
-    display:none;
+
+.visual-refresh .channelAppLauncher_e6e74f {
+    display: none;
 }
 
 /* Hide things in DMs page */
-li div a[href="/shop"], /* Hide 'Shop' Tab */
-li div a[href="/store"] /* Hide 'Ntiro' Tab */
-{
-  display: none;
+li div a[href="/shop"],
+/* Hide 'Shop' Tab */
+li div a[href="/store"]
+
+/* Hide 'Ntiro' Tab */
+    {
+    display: none;
 }
 
 /* Hide DM Wallpapers */
 /* As of writing, no global toggle exists in Discord. It is handled per DM. Will disable it once that exists. */
-[class^="chatContent_"] > [class^="wallpaperContainer_"]
-{
-    display:none;
+[class^="chatContent_"]>[class^="wallpaperContainer_"] {
+    display: none;
 }
-[class^="chatContent_"] > [class^="thumbhashContainer_"]
-{
-    display:none;
+
+[class^="chatContent_"]>[class^="thumbhashContainer_"] {
+    display: none;
 }
 
 /* Hide 'Play Again'' DMs page */
@@ -68,30 +68,30 @@ li div a[href="/store"] /* Hide 'Ntiro' Tab */
 */
 
 /* Profile effects */
-[class^="profileEffects"]
-{
+[class^="profileEffects"] {
     display: none;
 }
 
 /* Avatar Decorations */
-svg[class^="avatarDecoration"],             /* Avatar Decorations */
-img[class^="avatarDecoration"],             /* Avatar Decorations in Messages */
+svg[class^="avatarDecoration"],
+/* Avatar Decorations */
+img[class^="avatarDecoration"],
+/* Avatar Decorations in Messages */
 /* Fix 'View Profile' selector with hidden decoration */
-[class*="bannerSVGWrapper_"] > mask > image
-{
+[class*="bannerSVGWrapper_"]>mask>image {
     display: none;
 }
-[class*=avatarDecorationHint_] > foreignObject
-{
-  width: 80px;
-  height: 80px;
-  mask: url(#svg-mask-avatar-status-round-80);
+
+[class*=avatarDecorationHint_]>foreignObject {
+    width: 80px;
+    height: 80px;
+    mask: url(#svg-mask-avatar-status-round-80);
 }
-[class*=avatarDecorationHint_]
-{
-  top: -80px;
-  left: 0px;
-  position: relative;
+
+[class*=avatarDecorationHint_] {
+    top: -80px;
+    left: 0px;
+    position: relative;
 }
 
 
@@ -101,64 +101,60 @@ div[class*=videoContainer_] {
 }
 
 div[class*="container"]:has(div[class*=videoContainer_]) {
-    background: none !important; 
+    background: none !important;
 }
 
 /* Disable nitro icon on members list hover and opening nitro page */
 /* Some discords have the boosting capitalized, some don't, no clue why. There's probably a cleaner way to do this. */
 div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server boosting since"]),
-div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server Boosting since"])
-{
+div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server Boosting since"]) {
     pointer-events: none;
 }
 
 /* Disable clan tag in messages, memebers list, and popout profile view */
-div[class^=body_] > span[class^="clickable_"] [role="button"],
-div[class*=compact_] span[class*="clanTagChiplet_"], /* (ty SupDos on Github) */
+div[class^=body_]>span[class^="clickable_"] [role="button"],
+div[class*=compact_] span[class*="clanTagChiplet_"],
+/* (ty SupDos on Github) */
 span[class*="clanTagChiplet_"],
-span[class*="clanTag_"]
-{
+span[class*="clanTag_"] {
     display: none;
 }
 
 /* Disable 'Learn More' for nitro in the popout in the side DM (ty Regalia) */
-div[class*=overlayBackground_]:has(button[class*=getNitroButton_])
-{
+div[class*=overlayBackground_]:has(button[class*=getNitroButton_]) {
     display: none;
-};
+}
+
+;
 
 /* Disable nitro icon in word count (ty Regalia) */
-div[class*=characterCount_] div[class*=iconOnly_]:has(svg[class*=premium_])
-{
+div[class*=characterCount_] div[class*=iconOnly_]:has(svg[class*=premium_]) {
     display: none;
 }
 
 /* Hide 'Explore Discoverable Servers'/'Discover' in server page */
-div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-button"])
-{
-  display: none;
+div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-button"]) {
+    display: none;
 }
 
 /* Removes floating server list footer (currently only contains Discover) (ty gongo and provi) */
-ul[data-list-id='guildsnav'] > div[class^=footer]
-{
-  display: none;
+ul[data-list-id='guildsnav']>div[class^=footer] {
+    display: none;
 }
-div[class*=unreadMentionsFixedFooter]
-{
-  bottom: 0px;
+
+div[class*=unreadMentionsFixedFooter] {
+    bottom: 0px;
 }
 
 /* Make Super Reactions less annoying (ty Regalia) */
-div[class^="effectsWrapper"]
-{
+div[class^="effectsWrapper"] {
     display: none;
-} 
-img.emoji
-{
+}
+
+img.emoji {
     opacity: 100;
 }
-div[class*="shakeReaction"]
-{
+
+div[class*="shakeReaction"] {
     animation: none !important;
 }
