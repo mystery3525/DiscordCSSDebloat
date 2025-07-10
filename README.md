@@ -10,7 +10,7 @@ https://raw.githubusercontent.com/mystery3525/DiscordCSSDebloat/main/DubyasClean
 OR import with QuickCSS:
 
 ```css
-@import url("https://raw.githubusercontent.com/DubyaDude/DubyasCleanupOfDiscord/main/DubyasCleanupOfDiscord.css");
+@import url("https://raw.githubusercontent.com/mystery3525/DiscordCSSDebloat/main/DubyasCleanupOfDiscord.css");
 ```
 
 ![instructions](./instructions.png)
