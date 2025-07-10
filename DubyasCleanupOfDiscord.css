@@ -39,7 +39,9 @@ button[aria-label="Send a gift"] {
 /* Hide things in DMs page */
 li div a[href="/shop"],
 /* Hide 'Shop' Tab */
-li div a[href="/store"]
+li div a[href="/store"],
+/* Hide 'Library' Tab -mystery3525 */
+li div a[href="/library"]
 
 /* Hide 'Ntiro' Tab */
     {
@@ -76,10 +78,19 @@ li div a[href="/store"]
 svg[class^="avatarDecoration"],
 /* Avatar Decorations */
 img[class^="avatarDecoration"],
+/* Removes the full-div avatar nameplate backgrounds in the member list -mystery3525 */
+div[class*="wrapperPlated"] div[class^="childContainer"] div[class*="noFade"],
+/* Removes the full-div avatar nameplate backgrounds in the member list -mystery3525 */
+div[class*="member"] div[class^="childContainer"] div[class^="container"]:has(img[class^="img"]),
 /* Avatar Decorations in Messages */
 /* Fix 'View Profile' selector with hidden decoration */
 [class*="bannerSVGWrapper_"]>mask>image {
     display: none;
+}
+
+/* Removes the full-div avatar decoration background in the member list -mystery3525 */
+div[class*="wrapperPlated"] div[class^="nooFade"] {
+    background: none;
 }
 
 [class*=avatarDecorationHint_]>foreignObject {
@@ -157,4 +168,24 @@ img.emoji {
 
 div[class*="shakeReaction"] {
     animation: none !important;
+}
+
+/* Removes the Nitro Billing section in Settings -mystery3525 */
+nav[class^="sidebar"]>div[class^="side"]:has([class^="premiumTab"])>div:nth-child(n+20):nth-child(-n+26) {
+    display: none;
+}
+
+/* Removes the nitro section in avatar profiles settings page -mystery3525 */
+div div[class^="premiumFeatureBorder"] div[class^="premiumBackground"] {
+    display: none;
+}
+
+/* Removes the nitro popup in avatar profiles settings page -mystery3525 */
+div[class^="upsellContainer"]:has([class^="shinyButton__6a443"]) {
+    display: none;
+}
+
+/* Removes the "Boost Goal" progress bar in servers -mystery3525 */
+ul[aria-label="Channels"] div[class*=containerWithMargin]:has(div[class^=contentContainer]):has(div[class^=progressContainer]) {
+    display: none;
 }
