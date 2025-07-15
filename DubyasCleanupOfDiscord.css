@@ -200,6 +200,6 @@ ul[aria-label="Channels"] div[class*=containerWithMargin]:has(div[class^=content
 }
 
 /* Removes the "Earn Orbs via Quests" popup idgaf -mystery3525 */
-div[class^="clickTrapContainer"]:has(video[class^="orbAsset"]) {
+div[id^="popout"]:has([class^="orbAsset"]) {
     display: none;
 }
