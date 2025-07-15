@@ -198,3 +198,8 @@ div[class^="upsellContainer"]:has([class^="shinyButton__6a443"]) {
 ul[aria-label="Channels"] div[class*=containerWithMargin]:has(div[class^=contentContainer]):has(div[class^=progressContainer]) {
     display: none;
 }
+
+/* Removes the "Earn Orbs via Quests" popup idgaf -mystery3525 */
+div[class^="clickTrapContainer"]:has(video[class^="orbAsset"]) {
+    display: none;
+}
