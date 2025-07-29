@@ -28,7 +28,8 @@ button:has([class^="premiumIcon_"]),
 }
 
 /* Disable Gift Button(s) (in chat) */
-button[aria-label="Send a gift"] {
+button[aria-label="Send a gift"],
+div[aria-label="Send a gift"] {
     display: none;
 }
 
