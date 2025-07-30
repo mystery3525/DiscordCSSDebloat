@@ -19,7 +19,7 @@ div[id="profile-customization-tab"] > div[class^="container_"]
 }
 
 /* Disable Gift Button(s) (in chat) */
-button[aria-label="Send a gift"]
+div[aria-label="Send a gift"]
 {
     display: none;
 }
