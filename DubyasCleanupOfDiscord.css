@@ -146,8 +146,6 @@ div[class*=overlayBackground_]:has(button[class*=getNitroButton_]) {
     display: none;
 }
 
-;
-
 /* Disable nitro icon in word count (ty Regalia) */
 div[class*=characterCount_] div[class*=iconOnly_]:has(svg[class*=premium_]) {
     display: none;
@@ -204,5 +202,10 @@ ul[aria-label="Channels"] div[class^=container]:has(div[class^=contentContainer]
 
 /* Removes the "Earn Orbs via Quests" popup idgaf -mystery3525 */
 div[id^="popout"]:has([class^="orbAsset"]) {
+    display: none;
+}
+
+/* Removes the "PROMOTED" Quests advertisement in the friends list -mystery3525 */
+[aria-label="Friends"] div[class*="nowPlayingColumn"] div[class^="body"]:has(div[class^="wrapper"]):has(div[class*="promotedTag"]) {
     display: none;
 }
