@@ -260,6 +260,8 @@ div[class^="layerContainer"]:has(div[class^="clickTrapContainer"]):has(div[class
     display: none;
 }
 
+/* Removes username effects in vc member list -mystery3525 */
+li[class^="containerDefault"] div[class^="voiceUser"] div[class^="usernameContainer"] div[class^="usernameFont"],
 /* Removes username effects in messages -mystery3525 */
 li[class^="messageListItem"]>div[class^="message"]>div[class^="contents"] span[class^="username"],
 /* Removes username effects in profile popups -mystery3525 */
