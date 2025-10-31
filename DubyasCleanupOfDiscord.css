@@ -97,7 +97,7 @@ img[class^="avatarDecoration"],             /* Avatar Decorations in Messages */
 
 
 /* Hide nameplates background decoration on members list and DM list (ty Regalia) */
-div[class*=videoContainer_] {
+div[class*="container"] > div[class*=videoContainer_] {
     display: none;
 }
 
