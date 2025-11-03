@@ -73,7 +73,6 @@ button:has([class^="premiumIcon_"]),
 }
 
 /* Disable Gift Button(s) (in chat) */
-button[aria-label="Send a gift"],
 div[aria-label="Send a gift"] {
     display: none;
 }
@@ -92,14 +91,13 @@ div[aria-label="Send a gift"] {
 }
 
 /* Hide things in DMs page */
-li div a[href="/shop"],
 /* Hide 'Shop' Tab */
-li div a[href="/store"],
-/* Hide 'Library' Tab -mystery3525 */
-li div a[href="/library"]
-
+li div a[href="/shop"],
+/* Hide 'Quest' Tab */
+li div a[href="/quest-home"],
 /* Hide 'Ntiro' Tab */
-    {
+li div a[href="/store"],
+li div a[href="/library"] {
     display: none;
 }
 
@@ -162,7 +160,7 @@ div[class*="wrapperPlated"] div[class^="nooFade"] {
 
 
 /* Hide nameplates background decoration on members list and DM list (ty Regalia) */
-div[class*=videoContainer_] {
+div[class*="container"]>div[class*=videoContainer_] {
     display: none;
 }
 
