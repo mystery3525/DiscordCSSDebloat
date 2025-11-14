@@ -25,15 +25,7 @@ div[aria-label="Send a gift"]
 }
 
 /* Hide Channel App Launcher in chat */
-[class^="channelAppLauncher_"]
-{
-    display:none;
-}
-[class^="channelAppLauncher_"] > [class^="buttonContainer_"]
-{
-    display:none;
-}
-.visual-refresh .channelAppLauncher_e6e74f
+[class$="app-launcher-entrypoint"]
 {
     display:none;
 }
