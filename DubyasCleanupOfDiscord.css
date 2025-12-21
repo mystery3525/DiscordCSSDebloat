@@ -56,11 +56,24 @@ svg[class$="-avatarDecoration"],             /* Avatar Decorations */
 img[class$="-avatarDecoration"],             /* Avatar Decorations in Messages */
 
 /* Hide nameplates background decoration on members list and DM list (ty Regalia) */
-div[class*="-container"] > div[class$=-videoContainer] {
+/* DMs */
+li[class*="-dm"] > div > div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]){
+    background: none !important; 
     display: none;
 }
-
-div[class*="-container"]:has(div[class$=-videoContainer]) {
+/* Image */
+div[class*="-member"] > div > div[class*="-container"] > :is(div[class$=-videoContainer], img[class*=-img]) {
+    display: none;
+}
+/* Color fade */
+div[class*="-member"] > div > div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]) {
+    background: none !important; 
+}
+/* Self */
+div[class*="-fitInAccount"] > :is(div[class$=-videoContainer], img[class*=-img]) {
+    display: none; 
+}
+div[class*="-fitInAccount"]:has(div[class$=-videoContainer], img[class*=-img]) {
     background: none !important; 
 }
 
