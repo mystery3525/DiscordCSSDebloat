@@ -184,9 +184,7 @@ div[class^="upsellContainer"]:has([class^="shinyButton__6a443"]) {
 }
 
 /* Removes the "Boost Goal" progress bar in servers -mystery3525 */
-ul[aria-label="Channels"] div[class*=containerWithMargin]:has(div[class^=contentContainer]):has(div[class^=progressContainer]),
-ul[aria-label="Channels"] div:has(> div[class^=container]):has(div[class^=contentContainer]):has(svg[class*=boostCountText]),
-ul[aria-label="Channels"] div[class^=container]:has(div[class^=contentContainer]):has(svg[class*=boostCountText]) {
+ul[aria-label="Channels"] div[class*="-container"]:has(div[class$="-contentContainer"]):has(svg[class$="-boostCountText"]) {
     display: none;
 }
 
