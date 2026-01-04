@@ -61,14 +61,20 @@
 */
 
 /* Disable profile edit page upsell */
-div[id="profile-customization-tab"]>div[class^="container_"] {
+div[class$="-settingsPage"]>div>div[class$="-container"],
+div[class$="-settingsPage"]>div>div[class$="-floatingNitroUpsell"],
+div[class$="-settingsPage"]>div>div>div[class$="-tryItOutSection"],
+/* Disable profile view upsell */
+aside[class$="-upsellContainer"],
+/* Disable character count upsell */
+div[class$="-characterCount"]>div[class$="-upsell"] {
     display: none;
 }
 
+
 /* Disable emoji inspection upsell (ty Regalia) */
-[class^="nitroTextAndBadge_"],
-button:has([class^="premiumIcon_"]),
-[class^="emojiSection_"] [class^="flex_"] div[class*="text-sm-normal"] {
+div[class$="-emojiSection"]>button[class$="-ctaButton"],
+div[class*="-burstReactionTooltipPrompt"] {
     display: none;
 }
 
@@ -78,15 +84,7 @@ div[aria-label="Send a gift"] {
 }
 
 /* Hide Channel App Launcher in chat */
-[class^="channelAppLauncher_"] {
-    display: none;
-}
-
-[class^="channelAppLauncher_"]>[class^="buttonContainer_"] {
-    display: none;
-}
-
-.visual-refresh .channelAppLauncher_e6e74f {
+[class$="app-launcher-entrypoint"] {
     display: none;
 }
 
@@ -101,96 +99,54 @@ li div a[href="/library"] {
     display: none;
 }
 
-/* Hide DM Wallpapers */
-/* As of writing, no global toggle exists in Discord. It is handled per DM. Will disable it once that exists. */
-[class^="chatContent_"]>[class^="wallpaperContainer_"] {
-    display: none;
-}
-
-[class^="chatContent_"]>[class^="thumbhashContainer_"] {
-    display: none;
-}
-
-/* Hide 'Play Again'' DMs page */
-/* Disabled as this can be hidden by either:
-   - Right click and click Hide
-   - Or go to User Settings -> Advanced -> Show Play Again in DMs List
-
-[class^="container_e5a9ed"]
-{
-    display:none;
-}
-*/
-
 /* Profile effects */
-[class^="profileEffects"] {
+[class*="-profileEffects"] {
     display: none;
 }
 
 /* Avatar Decorations */
-svg[class^="avatarDecoration"],
+svg[class$="-avatarDecoration"],
 /* Avatar Decorations */
-img[class^="avatarDecoration"],
-/* Removes the full-div avatar nameplate backgrounds in the member list -mystery3525 */
-div[class*="wrapperPlated"] div[class^="childContainer"] div[class*="noFade"],
-/* Removes the full-div avatar nameplate backgrounds in the member list -mystery3525 */
-div[class*="member"] div[class^="childContainer"] div[class^="container"]:has(img[class^="img"]),
+img[class$="-avatarDecoration"],
 /* Avatar Decorations in Messages */
-/* Fix 'View Profile' selector with hidden decoration */
-[class*="bannerSVGWrapper_"]>mask>image {
-    display: none;
-}
-
-/* Removes the full-div avatar decoration background in the member list -mystery3525 */
-div[class*="wrapperPlated"] div[class^="nooFade"] {
-    background: none;
-}
-
-[class*=avatarDecorationHint_]>foreignObject {
-    width: 80px;
-    height: 80px;
-    mask: url(#svg-mask-avatar-status-round-80);
-}
-
-[class*=avatarDecorationHint_] {
-    top: -80px;
-    left: 0px;
-    position: relative;
-}
-
 
 /* Hide nameplates background decoration on members list and DM list (ty Regalia) */
-div[class*="container"]>div[class*=videoContainer_] {
+/* DMs */
+li[class*="-dm"]>div>div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]) {
+    background: none !important;
     display: none;
 }
 
-div[class*="container"]:has(div[class*=videoContainer_]) {
+/* Image */
+div[class*="-member"]>div>div[class*="-container"]> :is(div[class$=-videoContainer], img[class*=-img]) {
+    display: none;
+}
+
+/* Color fade */
+div[class*="-member"]>div>div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]) {
+    background: none !important;
+}
+
+/* Self */
+div[class*="-fitInAccount"]> :is(div[class$=-videoContainer], img[class*=-img]) {
+    display: none;
+}
+
+div[class*="-fitInAccount"]:has(div[class$=-videoContainer], img[class*=-img]) {
     background: none !important;
 }
 
 /* Disable nitro icon on members list hover and opening nitro page */
-/* Some discords have the boosting capitalized, some don't, no clue why. There's probably a cleaner way to do this. */
-div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server boosting since"]),
-div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server Boosting since"]) {
+div[class*=-nameAndDecorators]>span>div[role="button"]:has(svg[class*=premiumIcon]) {
     pointer-events: none;
 }
 
 /* Disable clan tag in messages, memebers list, and popout profile view */
-div[class^=body_]>span[class^="clickable_"] [role="button"],
-div[class*=compact_] span[class*="clanTagChiplet_"],
+div[class^=-body]>span[class^="-clickable"] [role="button"],
+div[class*=-compact] span[class*="-clanTagChiplet"],
 /* (ty SupDos on Github) */
-span[class*="clanTagChiplet_"],
-span[class*="clanTag_"] {
-    display: none;
-}
-
-/* Disable 'Learn More' for nitro in the popout in the side DM (ty Regalia) */
-div[class*=overlayBackground_]:has(button[class*=getNitroButton_]) {
-    display: none;
-}
-
-/* Disable nitro icon in word count (ty Regalia) */
-div[class*=characterCount_] div[class*=iconOnly_]:has(svg[class*=premium_]) {
+span[class*="-clanTagChiplet"],
+span[class*="-clanTag"] {
     display: none;
 }
 
@@ -199,17 +155,8 @@ div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-but
     display: none;
 }
 
-/* Removes floating server list footer (currently only contains Discover) (ty gongo and provi) */
-ul[data-list-id='guildsnav']>div[class^=footer] {
-    display: none;
-}
-
-div[class*=unreadMentionsFixedFooter] {
-    bottom: 0px;
-}
-
 /* Make Super Reactions less annoying (ty Regalia) */
-div[class^="effectsWrapper"] {
+div[class$="-effectsWrapper"] {
     display: none;
 }
 
@@ -217,7 +164,7 @@ img.emoji {
     opacity: 100;
 }
 
-div[class*="shakeReaction"] {
+div[class$="-shakeReaction"] {
     animation: none !important;
 }
 
