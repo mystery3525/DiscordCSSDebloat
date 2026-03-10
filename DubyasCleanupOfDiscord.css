@@ -111,3 +111,8 @@ div[class*="shakeReaction_"]
 {
     animation: none !important;
 }
+
+/* Remove "Promoted" Quest in Active Now sidebar */
+div[class^="itemCard__"] > div > div[class^="body__"]:has(span[class^="promotedTagBackground__"]) {
+    display: none;
+}
