@@ -61,20 +61,20 @@
 */
 
 /* Disable profile edit page upsell */
-div[class$="-settingsPage"]>div>div[class$="-container"],
-div[class$="-settingsPage"]>div>div[class$="-floatingNitroUpsell"],
-div[class$="-settingsPage"]>div>div>div[class$="-tryItOutSection"],
+div[class^="settingsPage_"]>div>div[class^="container_"],
+div[class^="settingsPage_"]>div>div[class*="floatingNitroUpsell_"],
+div[class^="settingsPage_"]>div>div>div[class*="tryItOutSection_"],
 /* Disable profile view upsell */
-aside[class$="-upsellContainer"],
+aside[class*="upsellContainer_"],
 /* Disable character count upsell */
-div[class$="-characterCount"]>div[class$="-upsell"] {
+div[class^="characterCount_"]>div[class*="upsell_"] {
     display: none;
 }
 
 
 /* Disable emoji inspection upsell (ty Regalia) */
-div[class$="-emojiSection"]>button[class$="-ctaButton"],
-div[class*="-burstReactionTooltipPrompt"] {
+div[class^="emojiSection_"]>button[class^="shinyButton_"],
+div[class*="burstReactionTooltipPrompt_"] {
     display: none;
 }
 
@@ -100,53 +100,53 @@ li div a[href="/library"] {
 }
 
 /* Profile effects */
-[class*="-profileEffects"] {
+[class*="profileEffects_"] {
     display: none;
 }
 
 /* Avatar Decorations */
-svg[class$="-avatarDecoration"],
+svg[class^="avatarDecoration_"],
 /* Avatar Decorations */
-img[class$="-avatarDecoration"],
+img[class^="avatarDecoration_"],
 /* Avatar Decorations in Messages */
 
 /* Hide nameplates background decoration on members list and DM list (ty Regalia) */
 /* DMs */
-li[class*="-dm"]>div>div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]) {
+li[class*="dm_"]>div>div[class*="container_"]:has(div[class^=videoContainer_], img[class*=img_]) {
     background: none !important;
     display: none;
 }
 
 /* Image */
-div[class*="-member"]>div>div[class*="-container"]> :is(div[class$=-videoContainer], img[class*=-img]) {
+div[class*="member_"]>div>div[class*="container_"]> :is(div[class^=videoContainer_], img[class*=img_]) {
     display: none;
 }
 
 /* Color fade */
-div[class*="-member"]>div>div[class*="-container"]:has(div[class$=-videoContainer], img[class*=-img]) {
+div[class*="member_"]>div>div[class*="container_"]:has(div[class^=videoContainer_], img[class*=img_]) {
     background: none !important;
 }
 
 /* Self */
-div[class*="-fitInAccount"]> :is(div[class$=-videoContainer], img[class*=-img]) {
+div[class*="fitInAccount_"]> :is(div[class^=videoContainer_], img[class*=img_]) {
     display: none;
 }
 
-div[class*="-fitInAccount"]:has(div[class$=-videoContainer], img[class*=-img]) {
+div[class*="fitInAccount_"]:has(div[class^=videoContainer_], img[class*=img_]) {
     background: none !important;
 }
 
 /* Disable nitro icon on members list hover and opening nitro page */
-div[class*=-nameAndDecorators]>span>div[role="button"]:has(svg[class*=premiumIcon]) {
+div[class*=nameAndDecorators_]>span>div[role="button"]:has(svg[class*=premiumIcon]) {
     pointer-events: none;
 }
 
 /* Disable clan tag in messages, memebers list, and popout profile view */
-div[class^=-body]>span[class^="-clickable"] [role="button"],
-div[class*=-compact] span[class*="-clanTagChiplet"],
+div[class^=body_]>span[class^="clickable_"] [role="button"],
+div[class*=compact_] span[class*="clanTagChiplet_"],
 /* (ty SupDos on Github) */
-span[class*="-clanTagChiplet"],
-span[class*="-clanTag"] {
+span[class*="clanTagChiplet_"],
+span[class*="clanTag_"] {
     display: none;
 }
 
@@ -156,7 +156,7 @@ div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-but
 }
 
 /* Make Super Reactions less annoying (ty Regalia) */
-div[class$="-effectsWrapper"] {
+div[class^="effectsWrapper_"] {
     display: none;
 }
 
@@ -164,7 +164,7 @@ img.emoji {
     opacity: 100;
 }
 
-div[class$="-shakeReaction"] {
+div[class*="shakeReaction_"] {
     animation: none !important;
 }
 
